@@ -1,13 +1,16 @@
 import  React, { Component } from 'react';
 import styled from 'styled-components';
 //import Navbar from './Navbar';
-import {Search} from '@mui/icons-material';
+import {Search,Mail,ShoppingCart} from '@mui/icons-material';
+//import {} from '@mui/icons-material';
+
+import Badge from '@mui/material/Badge';
 //import { Search } from '@material-ui/icons';
 
 const Container = styled.div 
    `
    height : 100px;
-   color: palevioletred;
+   color: black;
 
    `
 ;
@@ -25,21 +28,22 @@ const SearchContiner = styled.div
    border : 0.5px solid lightgray;
    display : flex;
    align-items : center;
-    margin-left:25px;
+    margin-left:20px;
     padding:5px;
    `
 
 ;
 const Input = styled.input 
-   `border :none;
+   `border :white;
    display : flex;
    align-items : center;
    background-color :white;
-   
+   font-size : 15px;
+   outline: none
    `
 ;
-const Logo = styled.h2`
-height:5px;
+const Logo = styled.h1`
+height:10px;
 margin-top :0.5px
 ` 
 
@@ -48,19 +52,33 @@ const Left = styled.div
    `
 ;
 const Language = styled.span`
-    font-size :14px;
+    font-size :16px;
     cursor : pointer;
+    margin-top :7px
+
 `;
 const Center = styled.div 
    `
    flex:1;
    text-align:center;
+   
    `
 ;
 const Right = styled.div 
    `
+   flex:1;
+   display : flex;
+   text-align:center;
+   margin-top :10px;
+   justify-content: flex-end;
    `
 ;
+const MenuItem = styled.div`
+    font-size: 14px;
+    cursor : pointer;
+    margin-left :25px;
+
+`;
 const Navbar  = () => {
     return (
         <Container>
@@ -68,11 +86,21 @@ const Navbar  = () => {
                 <Language>EN</Language>
                 <SearchContiner>
                     <Input/>
-                    <Search/>
+                    <Search style ={{color:"gray" ,fontSize:20 }}/>
                 </SearchContiner>
                 <Left></Left>
                 <Center><Logo>Hisham.</Logo></Center>
-                <Right>Right</Right> 
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SGIN IN</MenuItem>    
+                    <MenuItem>
+                        <Badge badgeContent={4} color="primary">
+                        <Mail color="action" />
+                        <ShoppingCart/>
+                        </Badge>
+                    </MenuItem>    
+
+                </Right> 
             </Wapper>
               
         </Container>
