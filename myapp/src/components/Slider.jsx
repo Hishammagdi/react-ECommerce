@@ -52,12 +52,15 @@ const ImgContainer = styled.div`
 
 const Body1 = styled.div`
      overflow-x: hidden;
+     overflow-y: hidden;
+
 `;
 
 const Image1 = styled.img`
   
-  height:90%;
+  height:100%;
   width : 40vw;
+  /*object-fit:cover;*/
 
 `
 
@@ -102,7 +105,7 @@ const Slider = () => {
 
         <Wapper slideIndex = {slideIndex}>
             {sliderItems.map(item=>(
-            <Slide bg={item.bg}>
+            <Slide bg={item.bg} key = {item.id}>
                 <ImgContainer>
                     <Image1 src={item.img} alt="Cover"/>
                 </ImgContainer>
