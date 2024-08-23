@@ -9,7 +9,7 @@ import Badge from '@mui/material/Badge';
 
 const Container = styled.div 
    `
-   height : 100px;
+   height : 60px;
    color: black;
 
    `
@@ -30,6 +30,8 @@ const SearchContiner = styled.div
    align-items : center;
     margin-left:20px;
     padding:5px;
+    margin-TOP:10px;
+
    `
 
 ;
@@ -44,17 +46,20 @@ const Input = styled.input
 ;
 const Logo = styled.h1`
 height:10px;
-margin-top :0.5px
+margin-top :0.5px;
+margin-left :70px;
+
 ` 
 
 const Left = styled.div 
    `
+   
    `
 ;
 const Language = styled.span`
     font-size :16px;
     cursor : pointer;
-    margin-top :7px
+    margin-top :17px
 
 `;
 const Center = styled.div 
@@ -69,16 +74,15 @@ const Right = styled.div
    flex:1;
    display : flex;
    text-align:center;
-   margin-top :10px;
+   margin-top :15px;
    justify-content: flex-end;
    `
 ;
 const MenuItem = styled.div`
     font-size: 14px;
     cursor : pointer;
-    margin-left :25px;
+    margin-left :25px;`;
 
-`;
 const Navbar  = () => {
     return (
         <Container>
@@ -89,13 +93,13 @@ const Navbar  = () => {
                     <Search style ={{color:"gray" ,fontSize:20 }}/>
                 </SearchContiner>
                 <Left></Left>
-                <Center><Logo>Hisham.</Logo></Center>
+                <Center><Logo>SHPPING NOW.</Logo></Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SGIN IN</MenuItem>    
                     <MenuItem>
                         <Badge badgeContent={4} color="primary">
-                        <Mail color="action" />
+                       
                         <ShoppingCart/>
                         </Badge>
                     </MenuItem>    
