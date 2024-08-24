@@ -45,20 +45,15 @@ export const popularProducts = [{
 
     {
         id: 2,
-        img: "https://i.ibb.co/tD2nYqP/img6.jpg"
-    },
-
-    {
-        id: 3,
         img: "https://i.ibb.co/nCNWr0c/img7.png"
     },
     {
-        id: 4,
+        id: 3,
         img: "https://i.ibb.co/ftMk44R/img8.png"
     },
 
     {
-        id: 5,
+        id: 4,
         img: "https://i.ibb.co/QYvGQK3/img9.png"
     },
 ]
