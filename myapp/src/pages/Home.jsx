@@ -12,8 +12,8 @@ import Footer from'../components/Footer'
 const  Home = () => {
     return ( 
         <>
-        <Navbar/>
         <Announcement/>
+        <Navbar/>
         <Slider/>
         <Categories/>
         <Products/>

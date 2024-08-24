@@ -7,15 +7,13 @@ import {Search,Mail,ShoppingCart} from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 //import { Search } from '@material-ui/icons';
 
-const Container = styled.div 
-   `
+const Container = styled.div `
    height : 60px;
    color: black;
 
    `
 ;
-const Wapper = styled.div 
-   `
+const Wapper = styled.div `
    padding : 5px 10px;
    background-color :white;
     display:flex;
@@ -23,8 +21,7 @@ const Wapper = styled.div
    `
 
 ;
-const SearchContiner = styled.div 
-   `
+const SearchContiner = styled.div    `
    border : 0.5px solid lightgray;
    display : flex;
    align-items : center;
@@ -35,46 +32,40 @@ const SearchContiner = styled.div
    `
 
 ;
-const Input = styled.input 
-   `border :white;
+const Input = styled.input `
+border :white;
    display : flex;
    align-items : center;
    background-color :white;
    font-size : 15px;
-   outline: none
-   `
-;
+   outline: none;
+   `;
 const Logo = styled.h1`
 height:10px;
 margin-top :0.5px;
 margin-left :70px;
 
-` 
+`;
 
-const Left = styled.div 
-   `
-   
-   `
+const Left = styled.div`   `
 ;
 const Language = styled.span`
     font-size :16px;
     cursor : pointer;
-    margin-top :17px
-
+    margin-top :17px;
 `;
-const Center = styled.div 
-   `
+const Center = styled.div `
    flex:1;
    text-align:center;
    
    `
 ;
-const Right = styled.div 
-   `
+const Right = styled.div `
    flex:1;
    display : flex;
    text-align:center;
    margin-top :15px;
+   margin-right :15px;
    justify-content: flex-end;
    `
 ;

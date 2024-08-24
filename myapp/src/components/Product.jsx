@@ -32,14 +32,14 @@ const Container = styled.div`
      opacity:1 ;
     }
 `;
-const Circle = styled.div`
+/*const Circle = styled.div`
     width : 200px;
     height:20px ;
     border-radius:50%;
     background-color:white;
     position:absolute;
 
-`;
+`;*/
 const Image  = styled.img`
     height:75% ;
     z-index:2;

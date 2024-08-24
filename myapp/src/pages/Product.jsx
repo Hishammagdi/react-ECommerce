@@ -4,6 +4,7 @@ import Newsletter from '../components/Newsletter';
 import { Footer } from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
+import { Add, Remove } from '@mui/icons-material';
 
 const Container = styled.div ` 
 
@@ -44,19 +45,83 @@ const FilterContainer = styled.div `
   justify-content : space-between;
 `;
 const Filter = styled.div ` 
- 
+    display:flex ;
+    align-items:center;
 `;
 const FilterTitle = styled.span ` 
- 
+    font-size:30px;
+    font-weight:300;
+    margin-right:5px;
 `;
 const FilterColor = styled.div ` 
- 
+    width:20px;
+    height:20px ;
+    border-radius:50%;
+    background-color :${props=>props.color};
+    margin-left:5px;
+    margin-top:8px;
+    cursor:pointer;
 `;
-const FilterSizeOption = styled.option ` 
- 
-`;
+
 const FilterSize = styled.select ` 
- 
+    margin-left:10px;
+    padding:5px;
+    margin-top:8px; 
+   
+    width:70px ;
+    border: 3px solid teal;
+    cursor : pointer;
+    &:hover{
+        background-color : #f8f4f4 ;
+    }
+`;
+const FilterSizeOption = styled.option`
+
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 3px solid teal;
+  cursor : pointer;
+    color:black;
+    &:hover{
+        background-color : #f8f4f4 ;
+    }
+`;
+const AddContainer = styled.div ` 
+    width : 50%;
+    display:flex;
+    align-items:center;
+    justify-content : space-between;    
+`;
+const AmountContainer = styled.div` 
+    display:flex;
+    align-items:center;
+    font-weight:700;
+`;
+const Amount = styled.span ` 
+    width:30px;
+    height:30p;
+    border-radius:7px;
+    border: 2px solid teal;
+    display :flex;
+    align-items:center;
+    justify-content :center;
+    margin:0px 5px;   
+     
+`;
+const Button = styled.button ` 
+    padding :15px;
+    font-size:20px;
+    border: 3px solid teal;
+    background-color : white ;
+    cursor : pointer;
+    color:black;
+    &:hover{
+        background-color : #f8f4f4 ;
+    }
 `;
 export const Product = () => {
     return ( 
@@ -90,10 +155,11 @@ export const Product = () => {
                             <FilterColor color="darkblue"/>
                             <FilterColor color="gray"/>
                         </Filter>
-                        <Filter>
+                        <Filter >
                             <FilterTitle>
                                     Size 
                             </FilterTitle>
+ 
                             <FilterSize>
                             <FilterSizeOption>XS</FilterSizeOption>
                             <FilterSizeOption>S</FilterSizeOption>
@@ -104,6 +170,15 @@ export const Product = () => {
                         </Filter>
 
                     </FilterContainer>
+                    <AddContainer>
+                        <AmountContainer>
+                            <Add/>
+                            <Amount> 1 </Amount>
+                            <Remove/>
+                        </AmountContainer>
+                        <Button> ADD TO CART </Button>
+
+                    </AddContainer>
                 </InfoContainer>
             </Wapper>
             <Newsletter/>
