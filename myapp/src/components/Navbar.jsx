@@ -6,11 +6,14 @@ import {Search,Mail,ShoppingCart} from '@mui/icons-material';
 
 import Badge from '@mui/material/Badge';
 //import { Search } from '@material-ui/icons';
-
+import{mobile} from '../responsive';
 const Container = styled.div `
    height : 60px;
    color: black;
-
+    ${mobile({height:"50px"})}
+   ${mobile({padding:"20px"})}
+   
+    flex:1;
    `
 ;
 const Wapper = styled.div `
@@ -18,6 +21,8 @@ const Wapper = styled.div `
    background-color :white;
     display:flex;
     justify-content: space-between;
+    ${mobile({padding:"10px 0px"})}
+
    `
 
 ;
@@ -28,6 +33,7 @@ const SearchContiner = styled.div    `
     margin-left:20px;
     padding:5px;
     margin-TOP:10px;
+   ${mobile({marginLeft:"0px"})}
 
    `
 
@@ -39,11 +45,16 @@ border :white;
    background-color :white;
    font-size : 15px;
    outline: none;
+   ${mobile({width:"50px"})}
+
    `;
 const Logo = styled.h1`
 height:10px;
 margin-top :0.5px;
 margin-left :70px;
+${mobile({fontSize:"15px"})}
+${mobile({marginLeft:"0px"})}
+${mobile({marginTop:"20px"})}
 
 `;
 
@@ -53,6 +64,8 @@ const Language = styled.span`
     font-size :16px;
     cursor : pointer;
     margin-top :17px;
+    ${mobile({display:"none"})}
+
 `;
 const Center = styled.div `
    flex:1;
@@ -80,11 +93,11 @@ const Navbar  = () => {
             <Wapper>
                 <Language>EN</Language>
                 <SearchContiner>
-                    <Input/>
+                    <Input placeholder = "Search"/>
                     <Search style ={{color:"gray" ,fontSize:20 }}/>
                 </SearchContiner>
                 <Left></Left>
-                <Center><Logo>SHPPING NOW.</Logo></Center>
+                <Center><Logo>SHPPING.</Logo></Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SGIN IN</MenuItem>    

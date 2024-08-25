@@ -1,7 +1,7 @@
 import React from 'react'
 import  styled from 'styled-components';
 import {  } from '@mui/icons-material';
-
+import{mobile} from '../responsive';
 const Container=styled.div`
     width:100vw;
     height:100vh;
@@ -17,6 +17,8 @@ const Wapper=styled.div`
     width:40%;
     padding:20px;
     background-color:white;
+    ${mobile({width:"75%"})}
+
 `;
 const Title=styled.h1`
     font-size:25px;

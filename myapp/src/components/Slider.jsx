@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import  styled from 'styled-components';
 import {ArrowLeft,ArrowRight} from '@mui/icons-material';
 import {sliderItems} from '../data.js'
-
+import{mobile} from '../responsive';
 
 const Container = styled.div`
     width : 100%;
     height : 100vh;
     position: relative;
     display:flex;
+   ${mobile({display:"none"})}
 
 `;
 const Arrow = styled.div`
@@ -42,6 +43,8 @@ const Slide = styled.div`
     height:100vh ;
     display:flex ;
     align-items : center;
+    flex:1;
+
     background-color:#${props=>props.bg} ;
 `;
 const ImgContainer = styled.div`
@@ -83,6 +86,7 @@ const Button = styled.button`
     font-size:20px;
     background-color : transparent ;
     cursor : pointer;
+
 `
 const Slider = () => {
     const[slideIndex,setSlideIndex]=  useState(0);

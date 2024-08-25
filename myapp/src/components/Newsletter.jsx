@@ -2,6 +2,7 @@ import React from 'react'
 import { Send } from '@mui/icons-material';
 //import Newsletter from './Newsletter';
 import  styled from 'styled-components';
+import{mobile} from '../responsive';
 
 const Container = styled.div`
     height:60vh;
@@ -10,15 +11,23 @@ const Container = styled.div`
     align-items:center;
     justify-content:center;
     flex-direction:column ;
+    ${mobile({overflowX:"hidden"})}
+
 `;
 const Title = styled.h1`
     font-size:70px;
+    ${mobile({textAlign:"center"})}
+    ${mobile({fontSize:"60px"})}
+
 
 `;
 const Description = styled.div`
   font-size:24px;
   font-weight:300;
   margin-bottom:20px;
+${mobile({textAlign:"center"})}
+
+
 `;
 const InputContainer = styled.div`
     width:50%;
@@ -36,6 +45,8 @@ const Input = styled.input`
    outline: none;
    flex:8; 
    padding-left:50px;
+${mobile({width:"250px"})}
+
 `;
 
 const Button = styled.button`
@@ -52,7 +63,7 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-        <Title>News letter</Title>
+        <Title>Newsletter</Title>
         <Description>Get timely updates from your favorite products.</Description>
         <InputContainer>
             <Input placeholder  ="Your email" />

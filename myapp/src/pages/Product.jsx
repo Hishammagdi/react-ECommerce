@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import { Add, Remove } from '@mui/icons-material';
+import{mobile} from '../responsive';
 
 const Container = styled.div ` 
 
@@ -12,6 +13,7 @@ const Container = styled.div `
 const Wapper = styled.div ` 
     padding:50px;
     display:flex;
+    ${mobile({padding:"10px" , flexDirection:"column"})}
 `;
 
 const ImgContainer = styled.div ` 
@@ -21,6 +23,8 @@ const Image = styled.img `
     width:100%:
     height:90vh;
     object-fit:cover;
+    ${mobile({width:"350px" , height:"70vh"})}
+    
 `;
 
 const InfoContainer = styled.div ` 
@@ -43,15 +47,20 @@ const FilterContainer = styled.div `
   margin : 30px 0px;
   display:flex ;
   justify-content : space-between;
+  ${mobile({width : "100%" ,justifyContent:"center"})}
+
 `;
 const Filter = styled.div ` 
     display:flex ;
-    align-items:center;
+    align-items:center;  
+    ${mobile({marginLeft:"10px"})}
+
 `;
 const FilterTitle = styled.span ` 
     font-size:30px;
     font-weight:300;
     margin-right:5px;
+
 `;
 const FilterColor = styled.div ` 
     width:20px;
@@ -61,6 +70,8 @@ const FilterColor = styled.div `
     margin-left:5px;
     margin-top:8px;
     cursor:pointer;
+    ${mobile({marginLeft:"10px"})}
+
 `;
 
 const FilterSize = styled.select ` 
@@ -74,6 +85,7 @@ const FilterSize = styled.select `
     &:hover{
         background-color : #f8f4f4 ;
     }
+
 `;
 const FilterSizeOption = styled.option`
 
@@ -94,7 +106,9 @@ const AddContainer = styled.div `
     width : 50%;
     display:flex;
     align-items:center;
-    justify-content : space-between;    
+    justify-content : space-between;  
+  ${mobile({width : "100%" })}
+
 `;
 const AmountContainer = styled.div` 
     display:flex;
