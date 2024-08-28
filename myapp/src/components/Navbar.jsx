@@ -1,7 +1,7 @@
-import  React, { Component } from 'react';
+import  React from 'react';
 import styled from 'styled-components';
 //import Navbar from './Navbar';
-import {Search,Mail,ShoppingCart} from '@mui/icons-material';
+import {Search,ShoppingCart} from '@mui/icons-material';
 //import {} from '@mui/icons-material';
 
 import Badge from '@mui/material/Badge';

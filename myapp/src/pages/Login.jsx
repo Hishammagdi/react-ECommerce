@@ -1,6 +1,21 @@
-import React from 'react'
+import {React} from 'react'
 import  styled from 'styled-components';
 import{mobile} from '../responsive';
+/*import {BrowserRouter, Routes , Route,createBrowserRouter,createRoutesFromElements} from "react-router-dom";
+import { RouterProvider, Outlet } from 'react-router';
+*/
+import Home from'../pages/Home';
+//import { Switch, Route, Redirect ,useNavigate}from "react-router-dom";
+//import { useNavigate,Navigate, Outlet}from "react-router-dom";
+//import { handleLogin } from './Login';
+
+//import { BrowserRouter,RouterProvider,Route,Routes, createBrowserRouter,createRoutesFromElements } from 'react-router-dom';
+//import { AssignmentReturnSharp } from '@mui/icons-material';
+//import Navbar from './../components/Navbar';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+
+//import { useNavigate,useLocation}from "react-router-dom";
+
 
 const Container=styled.div`
     width:100vw;
@@ -46,6 +61,7 @@ const Link=styled.a`
     text-decoration: underline;
     cursor:pointer;
 `;
+
 const Button=styled.button`
     padding :15px 20px;
     font-size:20px;
@@ -60,22 +76,65 @@ const Button=styled.button`
  ;
     }
 `;
+
+/*const router = createBrowserRouter(
+    createRoutesFromElements(
+         <Route path ="/" element = {<RootLayout/>}>
+          <Route path="/" element={<Home/>} /> 
+          </Route>
+    ));
+function RootLayout(){
+    return(
+        <>
+        <Login/>
+        <Outlet/>
+        </>
+    )
+}    */
+
+
+/*const handleLogin=( val)=>{   
+    console.log({val});
+    return(
+        <BrowserRouter>
+            <Routes>
+                <Route path = "./Login.jsx" element={<Home/>}/>
+            </Routes>
+        </BrowserRouter>
+
+    )      
+};*/
 const Login = () => {
-  return (
+    //let navigate = useNavigate();
+   // let navigate = useNavigate();
+    //let location = useLocation();
+    //let { from } = location.state || { from: { pathname: "./Home.jsx" } };
+    /*const handleLogin=()=>{   
+        navigate({from});   
+    };*/
+    const handleLogin=()=>{   
+        console.log('pass');
+        return(
+            <BrowserRouter>
+                <Routes>
+                    <Route path = "./" element={<Home/>}/>
+                </Routes>
+            </BrowserRouter>
     
+        )      
+    };
+  return (
     <Container>
         <Wapper>
             <Title>SIGN IN</Title>
             <Form>
                 <Input placeholder = "User Name" />
-                 <Input placeholder = "Password" />
-                <Button>LOGIN</Button>
+                <Input placeholder = "Password" />
+                <Button onclick={handleLogin}>LOGIN</Button>
                 <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
                 <Link>CREATE A NEW ACCOUNT</Link>
             </Form>
-           
         </Wapper>
-
     </Container>
   )
 }
